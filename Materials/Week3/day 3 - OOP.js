@@ -6,12 +6,10 @@ class Animal {
     this.nama = nama; // property
     this.umur = umur;
   }
-
   greet = () => "Meong"; // method
 }
 
 let kucing = new Animal("Tom", 16);
-
 // Inheritance - extends, super
 class Cat extends Animal {
   constructor(nama, umur, ras) {
@@ -36,7 +34,7 @@ class Human {
   sapa = () => `Oi ${this.nama}`;
 }
 
-let fariz = new Human("Fariz", 20, 168376536);
+let rianto = new Human("Rianto", 20, 168376536);
 
 // Abstraction - Hide the details/unnecessary data
 class Ongkir {
@@ -45,26 +43,21 @@ class Ongkir {
     this.berat = berat;
     this.#ongkir = this.berat * 2000;
     this._publik = "tes aja";
-    var jihad = "jihad"
+    var rianto = "jihad";
   }
-
-  getJihad() {
-    return this.jihad
+  getRianto() {
+    return this.rianto;
   }
-
   setJihad(jihad) {
-    this.jihad = jihad
+    this.rianto = jihad;
   }
-
   hitungOngkir = () => this.ongkir; // getter
 }
-
 let kirimTv = new Ongkir(10);
 // kirimTv.#ongkir = "Gantiii";
-kirimTv._publik = "Ganti ah"
+kirimTv._publik = "Ganti ah";
 // kirimTv.setJihad("Haaa")
-
-console.log(kirimTv.getJihad());
+console.log(kirimTv.getRianto());
 
 // Polymorphism - Overriding property/method
 class SumbawaPeople extends Human {
@@ -75,4 +68,4 @@ class SumbawaPeople extends Human {
   sapa = () => `Halooo ${this.nama}`;
 }
 
-let riski = new SumbawaPeople("riski", 20, 6138563789);
+let rianto = new SumbawaPeople("rianto", 20, 6138563789);
